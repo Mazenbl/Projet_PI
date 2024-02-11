@@ -2,8 +2,8 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 admin:
-   path: /admin
-   controller: App\Controller\AdminController::admin
+  path: /admin
+  controller: App\Controller\AdminController::admin
 user:
-   path: /user
-   controller: App\Controller\UserController::user
+  path: /user
+  controller: App\Controller\UserController::user
