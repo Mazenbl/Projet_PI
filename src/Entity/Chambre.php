@@ -19,6 +19,9 @@ class Chambre
     #[ORM\Column]
     private ?bool $statut = null;
 
+    #[ORM\ManyToOne(inversedBy: 'hopital_chambre')]
+    private ?Hopital $hopital = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +47,18 @@ class Chambre
     public function setStatut(bool $statut): static
     {
         $this->statut = $statut;
+
+        return $this;
+    }
+
+    public function getHopital(): ?Hopital
+    {
+        return $this->hopital;
+    }
+
+    public function setHopital(?Hopital $hopital): static
+    {
+        $this->hopital = $hopital;
 
         return $this;
     }

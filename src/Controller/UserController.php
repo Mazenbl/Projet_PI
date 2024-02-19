@@ -16,31 +16,31 @@ class UserController extends AbstractController
         ]);
     }
 
-    #[Route('/about', name: 'aboutPage')]
+    #[Route('/medecin', name: 'aboutPage')]
     public function about(): Response
     {
-        return $this->render('user/about.html.twig');
+        return $this->render('user/medecin.html.twig');
     }
 
-    #[Route('/doctor', name: 'doctorPage')]
+    #[Route('/pharmacie', name: 'doctorPage')]
     public function doctor(): Response
     {
-        return $this->render('user/doctor.html.twig');
+        return $this->render('user/pharmacie.html.twig');
     }
-    #[Route('/departements', name: 'departementsPage')]
+    #[Route('/labos', name: 'departementsPage')]
     public function departements(): Response
     {
-        return $this->render('user/departements.html.twig');
+        return $this->render('user/labos.html.twig');
     }
-    #[Route('/blog', name: 'blogPage')]
+    #[Route('/evenement', name: 'blogPage')]
     public function blog(): Response
     {
-        return $this->render('user/blog.html.twig');
+        return $this->render('user/evenement.html.twig');
     }
-    #[Route('/contact', name: 'contactPage')]
+    #[Route('/hopital', name: 'contactPage')]
     public function contact(): Response
     {
-        return $this->render('user/contact.html.twig');
+        return $this->render('hopital/show.html.twig');
     }
     #[Route('/signIn', name: 'signInPage')]
     public function signIn(): Response

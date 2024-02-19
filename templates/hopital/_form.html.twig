@@ -1,0 +1,15 @@
+{{ form_start(form) }}
+    {{ form_row(form.duree, {'attr': {'class': 'form-control', 'placeholder': 'Durée'}}) }}
+    {{ form_row(form.dateDebut, {'attr': {'class': 'form-control', 'placeholder': 'Date de début'}}) }}
+    {{ form_row(form.Hopital, {'attr': {'class': 'form-control', 'placeholder': 'Hopital'}}) }}
+    {{ form_row(form.patientNomEtPrenom, {'attr': {'class': 'form-control', 'placeholder': 'Nom et prénom du patient'}}) }}
+
+    {# Ajouter les messages d'erreur pour chaque champ #}
+    {% for child in form %}
+        {% for error in form_errors(child) %}
+            <div class="alert alert-danger">{{ error.message }}</div>
+        {% endfor %}
+    {% endfor %}
+
+    <button type="submit" class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
